@@ -5,8 +5,6 @@ programa
 	inclua biblioteca Util --> u
 	inclua biblioteca Texto --> texto
 
-	const inteiro ALTURA_DA_JANELA = 600, LARGURA_DA_JANELA = 800
-	const real TAMANHO_DO_TEXTO = 32.0
 
 	const cadeia MENSAGEM_BOAS_VINDAS = "Bem-vind@ ao Confere Asssiduidade da Turma 15!\nVamos conferir a assiduidade dos alunos!!\n"
 	const cadeia MENSAGEM_CONTINUAR_PROGRAMA = "\n\nDeseja continuar consultando?\nDigite 1 para SIM e 2 para NÃO.\n"
@@ -145,23 +143,14 @@ programa
 		} 
 	}
 
-	funcao iniciar_graficos() {
-		
-		g.iniciar_modo_grafico(verdadeiro)
-		g.definir_dimensoes_janela(LARGURA_DA_JANELA, ALTURA_DA_JANELA)
-		g.definir_tamanho_texto(TAMANHO_DO_TEXTO)
-		// italico, negrito, sublinhado
-		g.definir_estilo_texto(falso, verdadeiro, falso)
-			
-	}
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3297; 
- * @DOBRAMENTO-CODIGO = [20, 84, 88, 93, 106, 135, 147];
+ * @POSICAO-CURSOR = 3980; 
+ * @DOBRAMENTO-CODIGO = [18, 82, 86, 91, 104, 108, 127, 133];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
