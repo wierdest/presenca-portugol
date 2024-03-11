@@ -112,7 +112,7 @@ programa
 		para(inteiro i = 0; i <= NUMERO_DE_ALUNOS; i++) {
 			cadeia aluno = TURMA[i]
 			// funcao* *inteiro* posicao_texto(*cadeia* texto, *cadeia* cad, *inteiro* posicao_incial)
-			inteiro posicaoTexto = texto.posicao_texto(historico, aluno, 0)
+			inteiro posicaoTexto = texto.posicao_texto(aluno, historico, 0)
 			logico alunoPresente = posicaoTexto != -1
 			se(alunoPresente) {
 				inteiro numeroDeAlunosPresentes = u.numero_elementos(presentes)
@@ -156,7 +156,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3738; 
+ * @POSICAO-CURSOR = 3387; 
  * @DOBRAMENTO-CODIGO = [20, 92, 105, 131, 143];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
