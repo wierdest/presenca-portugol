@@ -2,6 +2,8 @@ programa
 {
 	inclua biblioteca Graficos --> g // use o operador --> para nomear a biblioteca para facilitar o acesso ao codigo da biblioteca. Vamos usar o . para acessar.
 	inclua biblioteca Teclado --> t
+	inclua biblioteca Util --> u
+	inclua biblioteca Texto --> texto
 
 	const inteiro ALTURA_DA_JANELA = 600, LARGURA_DA_JANELA = 800
 	const real TAMANHO_DO_TEXTO = 32.0
@@ -10,11 +12,13 @@ programa
 	const cadeia MENSAGEM_CONTINUAR_PROGRAMA = "\n\nDeseja continuar consultando?\nDigite 1 para SIM e 2 para NÃO.\n"
 	const cadeia MENSAGEM_OPCAO_INVALIDA = "\n Opção inválida\n\n"
 
-	const cadeia MENSAGEM_ENTRADA =  "Insira a cadeia do HISTÓRICO DO CHAT"
+	const cadeia MENSAGEM_ENTRADA =  "Insira a cadeia do HISTÓRICO DO CHAT \n\n"
 	cadeia historico = ""
 
+	const inteiro NUMERO_DE_ALUNOS = 37
+
 	// Todos os nomes da turma
-	const cadeia TURMA[37] = {
+	const cadeia TURMA[NUMERO_DE_ALUNOS] = {
     "Allan Lima Angelo",
     "André De Oliveira Toyomoto",
     "André Luiz Pinheiro Torrres Dos Santos",
@@ -54,8 +58,8 @@ programa
     "William Soares Da Cunha Silva"
     }
 
+	cadeia presentes[] = {}
 	
-
 	inteiro opcao = 1
 	logico programaLigado = opcao == 1
 	
@@ -65,8 +69,10 @@ programa
 		// a opcao [e uma variavel global, eu tenho que iniciar ela logo
 		// pq nao posso arriscar que o valor s[o vai ser lido aqui
 		enquanto(programaLigado) {
-			
 
+			mostrarMensagemEntrada()
+			lerDadosDoUsuario()
+			
 			verificarSeDevePermanecerLigado()
 			
 		}
@@ -98,6 +104,23 @@ programa
 		escreva(MENSAGEM_BOAS_VINDAS)
 	}
 
+	funcao conferirPresenca() {
+		
+		para(inteiro i = 0; i <= NUMERO_DE_ALUNOS; i++) {
+			cadeia aluno = TURMA[i]
+
+			// funcao* *inteiro* posicao_texto(*cadeia* texto, *cadeia* cad, *inteiro* posicao_incial)
+			inteiro posicaoTexto = texto.posicao_texto(historico, aluno, 0)
+			logico alunoPresente = posicaoTexto != -1
+			se(alunoPresente) {
+				
+			}
+
+			
+		}
+		
+	}
+
 	
 
 	funcao mostrarMensagemContinuarPrograma() {
@@ -127,8 +150,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2010; 
- * @DOBRAMENTO-CODIGO = [16, 102, 114];
+ * @POSICAO-CURSOR = 3424; 
+ * @DOBRAMENTO-CODIGO = [20, 89, 102, 125, 137];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
