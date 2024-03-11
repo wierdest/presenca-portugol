@@ -72,6 +72,7 @@ programa
 		enquanto(programaLigado) {
 
 			mostrarMensagemEntrada()
+			
 			lerDadosDoUsuario()
 
 			conferirPresenca()
@@ -111,10 +112,9 @@ programa
 		
 		para(inteiro i = 0; i < NUMERO_DE_ALUNOS; i++) {
 			cadeia aluno = TURMA[i]
-			// funcao* *inteiro* posicao_texto(*cadeia* texto, *cadeia* cad, *inteiro* posicao_incial)
-			inteiro posicaoTexto = texto.posicao_texto(aluno, historico, 0)
-			logico alunoPresente = posicaoTexto != -1
-			se(alunoPresente) {
+
+			se(conferirSeAlunoEstaPresente(aluno) == verdadeiro) {
+				
 				inteiro numeroDeAlunosPresentes = u.numero_elementos(presentes)
 				presentes[numeroDeAlunosPresentes - 1] = aluno
 				escreva(aluno + " está presente!\n")
@@ -127,7 +127,11 @@ programa
 		
 	}
 
-	
+	funcao logico conferirSeAlunoEstaPresente(cadeia aluno) {
+		inteiro posicaoTexto = texto.posicao_texto(aluno, historico, 0)
+		logico alunoPresente = posicaoTexto != -1
+		retorne alunoPresente
+	}
 
 	funcao mostrarMensagemContinuarPrograma() {
 		escreva(MENSAGEM_CONTINUAR_PROGRAMA)
@@ -156,8 +160,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3177; 
- * @DOBRAMENTO-CODIGO = [20, 92, 105, 131, 143];
+ * @POSICAO-CURSOR = 3297; 
+ * @DOBRAMENTO-CODIGO = [20, 84, 88, 93, 106, 135, 147];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
