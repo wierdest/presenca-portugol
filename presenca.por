@@ -109,7 +109,7 @@ programa
 
 	funcao conferirPresenca() {
 		
-		para(inteiro i = 0; i <= NUMERO_DE_ALUNOS; i++) {
+		para(inteiro i = 0; i < NUMERO_DE_ALUNOS; i++) {
 			cadeia aluno = TURMA[i]
 			// funcao* *inteiro* posicao_texto(*cadeia* texto, *cadeia* cad, *inteiro* posicao_incial)
 			inteiro posicaoTexto = texto.posicao_texto(aluno, historico, 0)
@@ -156,7 +156,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3387; 
+ * @POSICAO-CURSOR = 3177; 
  * @DOBRAMENTO-CODIGO = [20, 92, 105, 131, 143];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
