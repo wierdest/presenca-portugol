@@ -58,8 +58,8 @@ programa
     "William Soares Da Cunha Silva"
     }
 
-	cadeia presentes[] = {}
-	cadeia ausentes[] = {}
+	cadeia presentes[37]
+	cadeia ausentes[37]
 	
 	inteiro opcao = 1
 	logico programaLigado = opcao == 1
@@ -73,6 +73,8 @@ programa
 
 			mostrarMensagemEntrada()
 			lerDadosDoUsuario()
+
+			conferirPresenca()
 			
 			verificarSeDevePermanecerLigado()
 			
@@ -109,16 +111,18 @@ programa
 		
 		para(inteiro i = 0; i <= NUMERO_DE_ALUNOS; i++) {
 			cadeia aluno = TURMA[i]
-
 			// funcao* *inteiro* posicao_texto(*cadeia* texto, *cadeia* cad, *inteiro* posicao_incial)
 			inteiro posicaoTexto = texto.posicao_texto(historico, aluno, 0)
 			logico alunoPresente = posicaoTexto != -1
 			se(alunoPresente) {
 				inteiro numeroDeAlunosPresentes = u.numero_elementos(presentes)
-				presentes[numeroDeAlunosPresentes] = aluno
+				presentes[numeroDeAlunosPresentes - 1] = aluno
+				escreva(aluno + " está presente!\n")
+			} senao {
+				inteiro numeroDeAlunosAusentes = u.numero_elementos(ausentes)
+				ausentes[numeroDeAlunosAusentes - 1] = aluno
+				escreva(aluno + " está ausente!\n")
 			}
-
-			
 		}
 		
 	}
@@ -152,8 +156,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2177; 
- * @DOBRAMENTO-CODIGO = [20, 90, 103, 127, 139];
+ * @POSICAO-CURSOR = 3738; 
+ * @DOBRAMENTO-CODIGO = [20, 92, 105, 131, 143];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
