@@ -95,7 +95,7 @@ programa
 		escreva(MENSAGEM_CONTINUAR_PROGRAMA)
 		leia(opcao)
 		
-		se((opcao != 1) e (opcao != 2)) {
+		enquanto((opcao != 1) e (opcao != 2)) {
 			escreva(MENSAGEM_OPCAO_INVALIDA)
 			
 			escreva(MENSAGEM_CONTINUAR_PROGRAMA)
@@ -152,7 +152,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2099; 
+ * @POSICAO-CURSOR = 2901; 
  * @DOBRAMENTO-CODIGO = [17, 84, 88, 106, 142];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
