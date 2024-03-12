@@ -5,7 +5,6 @@ programa
 	inclua biblioteca Util --> u
 	inclua biblioteca Texto --> texto
 
-
 	const cadeia MENSAGEM_BOAS_VINDAS = "Bem-vind@ ao Confere Asssiduidade da Turma 15!\nVamos conferir a assiduidade dos alunos!!\n"
 	const cadeia MENSAGEM_CONTINUAR_PROGRAMA = "\n\nDeseja continuar consultando?\nDigite 1 para SIM e 2 para NÃO.\n"
 	const cadeia MENSAGEM_OPCAO_INVALIDA = "\n Opção inválida\n\n"
@@ -58,6 +57,7 @@ programa
 
 	cadeia presentes[37]
 	cadeia ausentes[37]
+	inteiro contaDosPresentes = 0, contaDosAusentes = 0
 	
 	inteiro opcao = 1
 	logico programaLigado = opcao == 1
@@ -74,6 +74,8 @@ programa
 			lerDadosDoUsuario()
 
 			conferirPresenca()
+
+			mostrarAusentes()
 			
 			verificarSeDevePermanecerLigado()
 			
@@ -112,17 +114,30 @@ programa
 			cadeia aluno = TURMA[i]
 
 			se(conferirSeAlunoEstaPresente(aluno) == verdadeiro) {
-				
-				inteiro numeroDeAlunosPresentes = u.numero_elementos(presentes)
-				presentes[numeroDeAlunosPresentes - 1] = aluno
+				contaDosPresentes++
+				presentes[contaDosPresentes - 1] = aluno
 				escreva(aluno + " está presente!\n")
+				
 			} senao {
-				inteiro numeroDeAlunosAusentes = u.numero_elementos(ausentes)
-				ausentes[numeroDeAlunosAusentes - 1] = aluno
+				contaDosAusentes++
+				ausentes[contaDosAusentes - 1] = aluno
 				escreva(aluno + " está ausente!\n")
 			}
 		}
 		
+	}
+
+	funcao mostrarAusentes() {
+		escreva("\n\nRELATÓRIO DOS ALUNOS AUSENTES\n\n")
+		escreva("\n\n -->>> " + contaDosAusentes + " alunos ausentes.\n\n")
+		se(contaDosAusentes > 0) {
+			
+			para(inteiro i = 0; i < contaDosAusentes; i++) {
+				cadeia aluno = ausentes[i]
+				inteiro numeroDoAlunoAusente = i + 1
+				escreva("\t --> " + aluno + "\n")
+			}
+		}
 	}
 
 	funcao logico conferirSeAlunoEstaPresente(cadeia aluno) {
@@ -149,8 +164,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3922; 
- * @DOBRAMENTO-CODIGO = [18, 82, 91, 104, 108, 127];
+ * @POSICAO-CURSOR = 3545; 
+ * @DOBRAMENTO-CODIGO = [17, 84, 88, 106, 142, 148];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
