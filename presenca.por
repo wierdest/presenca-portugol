@@ -55,8 +55,8 @@ programa
     "William Soares Da Cunha Silva"
     }
 
-	cadeia presentes[37]
-	cadeia ausentes[37]
+	cadeia presentes[NUMERO_DE_ALUNOS]
+	cadeia ausentes[NUMERO_DE_ALUNOS]
 	inteiro contaDosPresentes = 0, contaDosAusentes = 0
 	
 	inteiro opcao = 1
@@ -146,26 +146,14 @@ programa
 		retorne alunoPresente
 	}
 
-	funcao mostrarMensagemContinuarPrograma() {
-		escreva(MENSAGEM_CONTINUAR_PROGRAMA)
-		leia(opcao)
-		
-		enquanto((opcao != 1) e (opcao != 2)) {
-			escreva(MENSAGEM_OPCAO_INVALIDA)
-			
-			escreva(MENSAGEM_CONTINUAR_PROGRAMA)
-			leia(opcao)
-		} 
-	}
-
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3545; 
- * @DOBRAMENTO-CODIGO = [17, 84, 88, 106, 142, 148];
+ * @POSICAO-CURSOR = 2099; 
+ * @DOBRAMENTO-CODIGO = [17, 84, 88, 106, 142];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
