@@ -12,15 +12,15 @@ programa
 	const cadeia MENSAGEM_ENTRADA =  "Insira a cadeia do HISTÓRICO DO CHAT \n\n"
 	cadeia historico = ""
 
-	const inteiro NUMERO_DE_ALUNOS = 37
+	const inteiro NUMERO_DE_ALUNOS = 34
 
 	// Todos os nomes da turma
 	const cadeia TURMA[NUMERO_DE_ALUNOS] = {
     "Allan Lima Angelo",
     "André De Oliveira Toyomoto",
-    "André Luiz Pinheiro Torrres Dos Santos",
+
     "Andre Sathler Gonçalves",
-    "Andressa Rodrigues Figueira Combat",
+    "Andressa Rodrigues Combat",
     "Arthur Canto Frederico",
     "Arthur Pereira Leal",
     "Carolina Rocha Floro",
@@ -29,15 +29,13 @@ programa
     "Daniela Bulhões Da Silva",
     "Danilo Ramos Siqueira",
     "Evelyn Cristine Chamorro Aniceto",
-    "Felipe Emmanuel Cadena De Almeida",
-    "Fernanda De Souza Melo",
     "Gustavo Becario Rodrigues Godinho De Oliveira",
     "Johon Da Cunha Gomes",
     "Jonathan Pinho Cardoso",
     "José Luiz Da Silva Barbosa",
     "Julia Ferreira Coelho",
     "Karen Soares Câmara",
-    "Kenny Lucas Bitencourtt Dos Santos",
+    "Kenny Lucas Bitencourt Dos Santos",
     "Larissa Rahal Coelho",
     "Leilson Marques Felicio",
     "Leonard Himmelseher",
@@ -45,14 +43,14 @@ programa
     "Luis Fernando Da Silva Neves",
     "Marcelo Souza Affonso",
     "Marcio Bokel Pereira Das Neves",
-    "Maria Eduarda Bonan Silva",
     "Miguel Ferreira Ramos",
     "Pábullo Muniz Da Silva Motta",
     "Paula Beatriz Murtha Menezes",
     "Paulo Henrique De Mendonça Dias",
     "Raphael Gomes Jorge",
     "Rodrigo Silva Marques",
-    "William Soares Da Cunha Silva"
+    "William Soares Da Cunha Silva",
+    "Douglas Braga França"
     }
 
 	cadeia presentes[NUMERO_DE_ALUNOS]
@@ -152,8 +150,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2901; 
- * @DOBRAMENTO-CODIGO = [17, 84, 88, 106, 142];
+ * @POSICAO-CURSOR = 913; 
+ * @DOBRAMENTO-CODIGO = [82, 86, 104, 140];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
